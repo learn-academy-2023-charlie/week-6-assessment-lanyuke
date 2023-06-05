@@ -29,32 +29,54 @@ Researched answer:
 
 3. Name three rails generator commands. What is created by each?
 
-    Your answer: rails g model will generate a table model, rails g controller will generate a controller file for storing RESTful methods, rails g migration will generate migration file for migration.
+Your answer: 
+
+    rails g model will generate a table model, rails g controller will generate a controller file for storing RESTful methods, rails g migration will generate migration file for migration.
 
 Researched answer:
+
+    rails g model will generate a table model, rails g controller will generate a controller file for storing RESTful methods, rails g migration will generate migration file for migration.
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
 action: "GET" location: /students
-    get 'students' => 'student'
+
+    get 'students' => 'students#index'
 
 action: "POST" location: /students
 
+    post 'students' => 'students#create'
 
 action: "GET" location: /students/new
 
+    get 'students/new' => 'students#new'
 
 action: "GET" location: /students/2
 
+    get 'students/:id' => 'students#show'
 
 action: "GET" location: /students/2/edit
+
+    get 'students/:id/edit' => 'students#edit'
 
 
 action: "PATCH" location: /students/2
 
+    patch 'students/:id' => 'students#update'
 
 action: "DELETE" location: /students/2
 
-
+    delete 'students/:id' => 'students#destroy'
 
 5. As a developer, you are making an application to manage your to do list. Create 10 user stories that will help you get your application started. [Here is a resource](https://www.atlassian.com/agile/project-management/user-stories) to help you create your user stories.
+
+As a user, I want to be able to create a new task with a title and description, so I can keep track of what needs to be done.
+As a user, I want to mark a task as completed, so I can keep track of my progress.
+As a user, I want to be able to edit a task's title or description, in case there are any changes or updates.
+As a user, I want to be able to delete a task, in case I no longer need to do it.
+As a user, I want to be able to prioritize tasks, so I can focus on the most important ones first.
+As a user, I want to be able to categorize tasks into different lists or categories, such as work, personal, or shopping.
+As a user, I want to be able to set due dates for tasks, so I can stay organized and complete them on time.
+As a user, I want to be able to add labels or tags to tasks, so I can easily filter or search for specific tasks.
+As a user, I want to be able to set reminders or notifications for important tasks, so I don't forget to complete them.
+As a user, I want to have a user account and be able to log in, so my to-do list is personalized and accessible across devices.
